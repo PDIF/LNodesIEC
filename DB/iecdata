@@ -1,0 +1,981 @@
+[
+{
+"CLASS": "LPHD",
+"EXPLAN": "Информация о физическом устройстве",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ данного класса на физическое устройство, при этом этот экземпляр размещается в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Информация о состоянии аппаратной части ИЭУ", "Информация о состоянии программной части ИЭУ", "Сброс статистики", "Управление режимом симуляции"],
+"DESCR": [{"NAME": "PhyNam", "CDC": "DPL", "EXPLANATION": "Информация о физического устройства", "T": "", "IEC": "O", "CORP": "O"}],
+"STATUS": [{"NAME": "PhyHealth", "CDC": "ENS", "EXPLANATION": "Контроль исправности устройства", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "OutOv", "CDC": "SPS", "EXPLANATION": "Переполнение буфера выходных данных", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Proxy", "CDC": "SPS", "EXPLANATION": "Индикация логического узла- прокси", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "InOv", "CDC": "SPS", "EXPLANATION": "Переполнение буфера входных данных", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NumPwrUp", "CDC": "INS", "EXPLANATION": "Число включений устройства", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "WrmStr", "CDC": "INS", "EXPLANATION": "Число программных перезагрузок", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "WacTrg", "CDC": "INS", "EXPLANATION": "Число срабатываний реле готовности устройства", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PwrUp", "CDC": "SPS", "EXPLANATION": "Индикация наличия оперативного питания", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PwrDn", "CDC": "SPS", "EXPLANATION": "Индикация потери оперативного питания", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PwrSupAlm", "CDC": "SPS", "EXPLANATION": "Неисправность цепей оперативного питания", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PwrFail", "CDC": "SPS", "EXPLANATION": "Отказ источника питания", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "RAMHealth", "CDC": "ENS", "EXPLANATION": "Исправность ОЗУ", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "ROMHealth", "CDC": "ENS", "EXPLANATION": "Исправность ПЗУ", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "AdcFail", "CDC": "SPS", "EXPLANATION": "Отказ АЦП", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "CPUFail", "CDC": "SPS", "EXPLANATION": "Отказ ЦП", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "FWFail", "CDC": "SPS", "EXPLANATION": "Отказ встроенного ПО", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "TmpHealth", "CDC": "ENS", "EXPLANATION": "Температурный режим ИЭУ", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "AlunitStl", "CDC": "SPS", "EXPLANATION": "Отказ модуля аналоговых входов", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "DIOunitStl", "CDC": "SPS", "EXPLANATION": "Отказ модуля дискретных/релейных входов", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "AuxIOUnitStl", "CDC": "SPS", "EXPLANATION": "Отказ вспомогательного модуля", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "SrvConn", "CDC": "SPS", "EXPLANATION": "Установлено подключение через сервисный порт", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "CybSecEvt", "CDC": "SPS", "EXPLANATION": "Ошибка авторизации", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "MemRs", "CDC": "SPS", "EXPLANATION": "Сброс часов или памяти вследствие перезагрузки", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "CRFail", "CDC": "SPS", "EXPLANATION": "Ошибка конфигурации", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "CRChg", "CDC": "SPS", "EXPLANATION": "Конфигурация изменена", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "NamVariant", "CDC": "VSD", "EXPLANATION": "Список поддерживаемых классов SV-потоков согласно МЭК 61869-9", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamHzRtg", "CDC": "VSD", "EXPLANATION": "Список поддерживаемых номинальных частот", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamAuxVRtg", "CDC": "VSD", "EXPLANATION": "Список поддерживаемого напряжения питания", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamHoldRtg", "CDC": "VSD", "EXPLANATION": "Расчетное время удержания, с", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamMaxDlRtg", "CDC": "VSD", "EXPLANATION": "Максимальное время задержки обработки, мс", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "RsStat", "CDC": "SPC", "EXPLANATION": "Сброс статистических данных устройства", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "Sim", "CDC": "SPC", "EXPLANATION": "Перевод в режим симуляции для получения GOOSE и SV от испытательных систем", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "Common LN",
+"EXPLAN": "Общий логический узел",
+"SHORT": "",
+"USAGE": "Данный класс ЛУ не представляется отдельными экземплярами ЛУ, объекты данных ЛУ Common LN могут использоваться в любых других типах ЛУ, кроме LPHD, при соблюдении условий применения. Ряд объектов данных, приведенных для соответствующих классов, являются обязательными.",
+"LNNAME": [],
+"FUNCT": ["Основная информация о режиме работы", "Описание входов ЛУ", "Описание входов блокировки ЛУ", "Ведение статистических расчетов"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "C1", "CORP": "C1"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "C1", "CORP": "C1"}, {"NAME": "Blk", "CDC": "SPS", "EXPLANATION": "Динамическая блокировка функции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ClcExp", "CDC": "SPS", "EXPLANATION": "Период расчета истек", "T": "T", "IEC": "C3", "CORP": "C3"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "C1", "CORP": "C1"}, {"NAME": "CmdBlk", "CDC": "SPC", "EXPLANATION": "Блокировка операций управления", "T": "", "IEC": "C2", "CORP": "C2"}, {"NAME": "ClcStr", "CDC": "SPC", "EXPLANATION": "Включение начала вычисления на время operTm из модели управления или немедленно", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "InRefl", "CDC": "ORG", "EXPLANATION": "Общая ссылка на вход", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkRef1", "CDC": "ORG", "EXPLANATION": "Ссылка на блокирование показывает получение блокирующего сигнала", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ClcMth", "CDC": "ENG", "EXPLANATION": "Расчетный метод статистических объектов данных", "T": "", "IEC": "C3", "CORP": "C3"}, {"NAME": "ClcMod", "CDC": "ENG", "EXPLANATION": "Расчетный режим. Допустимые значения: TOTAL, PERIOD, SLIDING", "T": "", "IEC": "C4", "CORP": "C4"}, {"NAME": "ClcIntvTyp", "CDC": "ENG", "EXPLANATION": "Тип расчетного интервала", "T": "", "IEC": "C4", "CORP": "C4"}, {"NAME": "ClcIntvPer", "CDC": "ING", "EXPLANATION": "В случае ClcIntvTyp эквивалентно MS, PER-CYCLE, CYCLE, DAY, WEEK, MONTH, YEAR, количество единиц для расчета продолжительности интервала расчета", "T": "", "IEC": "C4", "CORP": "C4"}, {"NAME": "NumSubIntv", "CDC": "ING", "EXPLANATION": "Количество подинтервалов, содержащихся в расчетном интервале", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ClcRfTyp", "CDC": "ENG", "EXPLANATION": "Тип интервала обновления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ClcRfPer", "CDC": "ING", "EXPLANATION": "Если ClcIntvTyp задан MS, PER-CYCLE, CYCLE, DAY, WEEK, MONTH, YEAR, количество единиц используется для расчета интервала", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ClcSrc", "CDC": "ORG", "EXPLANATION": "Общая ссылка на логический узел источник", "T": "", "IEC": "C5", "CORP": "C5"}, {"NAME": "ClcNxTmms", "CDC": "ING", "EXPLANATION": "Оставшееся время до конца текущего интервала расчета в миллисекундах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "InSyn", "CDC": "ORG", "EXPLANATION": "Привязка объекта к источнику внешнего сигнала синхронизации для расчета интервала", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C1":"Mod, Health и NamPlt обязательны для LLN0 корневого логического устройства, для остальных ЛУ опциональны"}, {"C2":"CmdBlk должен использоваться во всех ЛУ, содержащих управляемые ОД, если для них не предусмотрены отдельные блокировки (BlkOpn/BlkCls) в XCBR"}, {"C3":"Эти объекты данных опциональны, но должны использоваться для статистических расчетных параметров в таких логических узлах, как MMXU, MMXN и пр."}, {"C4":"Эти объекты данных обязательны, если есть ClcMth и его значение не UNSPECIFIED"}, {"C5":"Этот объект данных обязателен, если данный логический узел использует статистические расчетные параметры, рассчитываемые в другом логическом узле"}]
+}
+,
+{
+"CLASS": "LLN0",
+"EXPLAN": "Системные функции",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для каждого логического устройства модели ИЭУ.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Пуск диагностики", "Сброс светодиодной индикации", "Размещение наборов данных логического устройства", "Размещение блоков управления отчетами логического устройства", "Размещение блоков управления GOOSE-сообщениями логического устройства", "Размещение блоков управления SV-потоками логического устройства", "Описание сервиса смены группы уставок"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "C", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Системные функции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Полномочия переключения на станционном уровне", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Diag", "CDC": "SPC", "EXPLANATION": "Пуск диагностики", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LEDRs", "CDC": "SPC", "EXPLANATION": "Сброс светодиодов", "T": "T", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "GrRef", "CDC": "ORG", "EXPLANATION": "Общая ссылка на логическое устройство более высокого уровня", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MltLev", "CDC": "SPG", "EXPLANATION": "Выбор режима полномочий местного управления (True- разрешен контроль с нескольких уровней управления, False- разрешен контроль только с текущего уровня управления)", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Mod, Health и NamPlt обязательны для LLN0 корневого логического устройства, для остальных ЛУ опциональны"}]
+}
+,
+{
+"CLASS": "LCCH",
+"EXPLAN": "Контроль физического канала связи",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для каждого доступного физического порта ИЭУ с поддержкой МЭК 61850 без резервирования, в случае резервирования физических портов применяется один экземпляр на пару резервируемых портов. Экземпляры ЛУ размещаются в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Мониторинг состояния связи", "Мониторинг состояния внутренних буферов", "Подсчет статистики по ошибкам"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ChLiv", "CDC": "SPS", "EXPLANATION": "Состояние основного физического канала; ИСТИНА, если по каналу идет прием сообщений через заданные временные интервалы", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "RedChLiv", "CDC": "SPS", "EXPLANATION": "Состояние резервного физического канала; ИСТИНА, если по каналу идет прием сообщений через заданные временные интервалы", "T": "", "IEC": "C", "CORP": "C"}, {"NAME": "OutOv", "CDC": "SPS", "EXPLANATION": "Переполнение буфера выходных данных", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "InOv", "CDC": "SPS", "EXPLANATION": "Переполнение буфера входных данных", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Fer", "CDC": "INS", "EXPLANATION": "Частота возникновения ошибок по данному каналу; число некорректных (или потерянных - в случае резервирования) сообщений на 1000 сообщений, перенаправленных в приложение", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RedFer", "CDC": "INS", "EXPLANATION": "Частота возникновения ошибок по резервному каналу связи; число потерянных сообщений на 1000 сообщений, перенаправленных в приложение", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ErProb", "CDC": "ENS", "EXPLANATION": "Вероятность ошибок в канале", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "RedErProb", "CDC": "ENS", "EXPLANATION": "Вероятность ошибок в канале", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "RxCnt", "CDC": "BCR", "EXPLANATION": "Количество сообщений, принятых по основному каналу", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RedRxCnt", "CDC": "BCR", "EXPLANATION": "Количество сообщений, принятых по резервному каналу", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Объект данных должен быть использован при используемого резервного канала"}]
+}
+,
+{
+"CLASS": "LGOS",
+"EXPLAN": "Подписка на GOOSE",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для каждого принимаемого GOOSE-сообщения. Экземпляры ЛУ размещаются в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Мониторинг параметров принимаемого GOOSE-сообщения", "Указание статуса резервирования GOOSE-сообщения"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "NdsCom", "CDC": "SPS", "EXPLANATION": "Необходимость корректировки конфигурации на прием", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "St", "CDC": "SPS", "EXPLANATION": "Состояние подписки (Истина - активна, Ложь - не активна)", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "SimSt", "CDC": "SPS", "EXPLANATION": "Индикация приема сообщений с признаком симуляции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LastStNum", "CDC": "INS", "EXPLANATION": "Номер состояния из последнего полученного сообщения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ConfRevNum", "CDC": "INS", "EXPLANATION": "Ожидаемый номер ревизии конфигурации (номер ревизии в соответствии с актуальной электронной конфигурацией)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ActMsg", "CDC": "INS", "EXPLANATION": "Номер активного сообщения (используется при дублировании сообщений)", "T": "", "IEC": "E", "CORP": "C"}, {"NAME": "PairNum", "CDC": "INS", "EXPLANATION": "Номер пары сообщений (используется при дублировании сообщений)", "T": "", "IEC": "E", "CORP": "C"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "GoCBRef", "CDC": "ORG", "EXPLANATION": "Ссылка на блок управления передачей GOOSE- сообщения, на которое выполнена подписка", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": [{"C":"Используется при резервировании GOOSE-сообщения"}]
+}
+,
+{
+"CLASS": "LSVS",
+"EXPLAN": "Подписка на Sampled Values",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для каждого принимаемого SV-потока. Экземпляры ЛУ размещаются в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Мониторинг параметров принимаемого SV-потока", "Указание статуса резервирования SV-потока"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "NdsCom", "CDC": "SPS", "EXPLANATION": "Необходимость корректировки конфигурации на прием", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "St", "CDC": "SPS", "EXPLANATION": "Состояние подписки (Истина - активна, Ложь - не активна)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "SimSt", "CDC": "SPS", "EXPLANATION": "Индикация приема сообщений с признаком симуляции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LastStNum", "CDC": "INS", "EXPLANATION": "Номер состояния из последнего полученного сообщения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ConfRevNum", "CDC": "INS", "EXPLANATION": "Ожидаемый номер ревизии конфигурации (номер ревизии в соответствии с актуальной электронной конфигурацией)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ActStrm", "CDC": "INS", "EXPLANATION": "Номер активного сообщения (используется при дублировании сообщений)", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "PairNum", "CDC": "INS", "EXPLANATION": "Номер пары сообщений (используется при дублировании сообщений)", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "SvCBRef", "CDC": "ORG", "EXPLANATION": "Ссылка на блок управления передачей SV- сообщения, на которое выполнена подписка", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RedSvCBRef", "CDC": "ORG", "EXPLANATION": "Ссылка на блок управления передачей SV- сообщения, на которое выполнена подписка", "T": "", "IEC": "E", "CORP": "O"}],
+"COND": [{"C":"Используется при резервировании SV-потока"}]
+}
+,
+{
+"CLASS": "LTIM",
+"EXPLAN": "Управление внутренними часами",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для физического устройства. Экземпляр ЛУ размещается в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Смещение времени", "Настройки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmDT", "CDC": "SPS", "EXPLANATION": "Индикация работы по летнему времени", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmRs", "CDC": "SPC", "EXPLANATION": "Сброс времени", "T": "", "IEC": "E", "CORP": "O"}],
+"PARAMS": [{"NAME": "TmOfsTmm", "CDC": "ING", "EXPLANATION": "Смещение местного времени от UTC в минутах", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "TmUseDT", "CDC": "SPG", "EXPLANATION": "Флаг использования летнего времени", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "TmChgDayTm", "CDC": "TSG", "EXPLANATION": "Местное время следующего перехода на летнее время", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmChgStdTm", "CDC": "TSG", "EXPLANATION": "Местное время перехода на стандартное время", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrWeekDay", "CDC": "ENG", "EXPLANATION": "День начала недели для расчета статистики", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "LTMS",
+"EXPLAN": "Контроль источника времени",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для физического устройства. Экземпляр ЛУ размещается в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Статусная информация об источнике синхронизации времени", "Настройки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmAcc", "CDC": "INS", "EXPLANATION": "Количество значащих бит в долях секунды в метке времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmSrc", "CDC": "VSS", "EXPLANATION": "Текущий источник времени", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "TMSyn", "CDC": "ENS", "EXPLANATION": "Статус синхронизации согласно МЭК 61850-9-2", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmChSt1", "CDC": "SPS", "EXPLANATION": "Статус канала синхронизации", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "TmSrcSet1", "CDC": "VSG", "EXPLANATION": "Указание источника (1588 для PTP)", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "LTRK",
+"EXPLAN": "Служба мониторинга данных",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ для каждого сервиса или группы сервисов. Экземпляры ЛУ размещаются в соответствующих логических устройствах.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Мониторинг работы сервисов по типам данных"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SpcTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания управляемого типа single point", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DpcTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания управляемого типа double point", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "IncTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания управляемого типа Integer", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "EncTrk1", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания управляемого типа enumerated", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ApcFTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания управляемой аналоговой уставки типа float", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ApcIntTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания управляемой аналоговой уставки типа Integer", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BscTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания типа binary, управляющего изменением шага", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "IscTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания типа integer, управляющего изменением шага", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BacTrk", "CDC": "CTS", "EXPLANATION": "Сервис отслеживания типа binary, управляющего аналоговым значением процесса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "GenTrk", "CDC": "CST", "EXPLANATION": "Общее отслеживание для всех сервисов, для которых не существует конкретных данных отслеживания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "UrcbTrk", "CDC": "UTS", "EXPLANATION": "Сервис отслеживания доступа для блока управления небуферизируемым отчетом", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BrcbTrk", "CDC": "BTS", "EXPLANATION": "Сервис отслеживания доступа для блока управления буферизированным отчетом", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocbTrk", "CDC": "LTS", "EXPLANATION": "Сервис отслеживания доступа для блока управления журналом событий", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "GocbTrk", "CDC": "GTS", "EXPLANATION": "Сервис отслеживания доступа для блока управления GOOSE- сообщения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MsvcbTrk", "CDC": "MTS", "EXPLANATION": "Сервис отслеживания доступа для блока управления широковещательным потоком Sampled Values", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "UsvcbTrk", "CDC": "NTS", "EXPLANATION": "Сервис отслеживания доступа для блока управления направленным потоком Sampled Values", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SgcbTrk", "CDC": "STS", "EXPLANATION": "Сервис отслеживания доступа для блока управления группами уставок", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "ATCC",
+"EXPLAN": "Автоматический регулятор положения РПН",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на (авто)трансформатор, оснащенный устройством РПН. Экземпляры ЛУ размещаются в соответствующих логических устройствах.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Отображение статуса параметров АРКТ", "Отображение контролируемых величин", "Управление работой АРКТ"],
+"DESCR": [{"NAME": "PhyNam", "CDC": "DPL", "EXPLANATION": "Информация о физического устройства", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "HiTapPos", "CDC": "INS", "EXPLANATION": "Самое верхнее положение после последней перезагрузки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LoTapPos", "CDC": "INS", "EXPLANATION": "Самое нижнее положение после последней перезагрузки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TapOpR", "CDC": "SPS", "EXPLANATION": "Команда прибавить", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "TapOpL", "CDC": "SPS", "EXPLANATION": "Команда убавить", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "TapOpStop", "CDC": "SPS", "EXPLANATION": "Остановить изменение положения", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "TapOpErr", "CDC": "SPS", "EXPLANATION": "Ошибка переключения или индикации положения (например, неверный код BCD)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OoStep", "CDC": "SPS", "EXPLANATION": "Рассогласование", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LTCBlkVLo", "CDC": "SPS", "EXPLANATION": "Блокировка автоматического регулирования по низкому напряжению", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LTCBlkVHi", "CDC": "SPS", "EXPLANATION": "Блокировка автоматического регулирования по высокому напряжению", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LTCBlkAHi", "CDC": "SPS", "EXPLANATION": "Блокировка регулирования по превышению тока через РПН", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkAbnrmMod", "CDC": "SPS", "EXPLANATION": "Блокировка автоматического регулирования по ненормальному режиму на регулируемых или контролируемых шинах", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "BlkDisconn", "CDC": "SPS", "EXPLANATION": "Блокировка автоматического регулирования при разрыве связи с шинами", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "BlkLoVisc", "CDC": "SPS", "EXPLANATION": "Блокировка регулирования по низкой температуре масла РПН (низкая вязкость масла)", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "BlkLoLev", "CDC": "SPS", "EXPLANATION": "Блокировка регулирования по низкому уровню масла РПН", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "BlkSFopen", "CDC": "SPS", "EXPLANATION": "Блокировка регулирования по причине отключенного автомата питания привода РПН", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "EndPosR", "CDC": "SPS", "EXPLANATION": "Достигнуто максимальное положение", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EndPosL", "CDC": "SPS", "EXPLANATION": "Достигнуто минимальное положение", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ErrPar", "CDC": "SPS", "EXPLANATION": "Ошибка параллельной работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LTCStuck", "CDC": "SPS", "EXPLANATION": "Длительное переключение", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "IncomplOp", "CDC": "SPS", "EXPLANATION": "Переключение не завершено", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LTCRun", "CDC": "SPS", "EXPLANATION": "Самопроизвольное переключение", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LTCIdle", "CDC": "SPS", "EXPLANATION": "Переключение не началось", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TapChg", "CDC": "BSC", "EXPLANATION": "Изменить положение (выше, ниже, стоп)", "T": "", "IEC": "C1", "CORP": "C1"}, {"NAME": "TapPos", "CDC": "ISC", "EXPLANATION": "Задать положение", "T": "", "IEC": "C1", "CORP": "C1"}, {"NAME": "BndCtrChg", "CDC": "BAC", "EXPLANATION": "Центральное положение", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ParOp", "CDC": "SPC", "EXPLANATION": "Параллельные/независимые операции", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "LTCBlk", "CDC": "SPC", "EXPLANATION": "Блокировка автоматического управления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LTCDragRs", "CDC": "SPC", "EXPLANATION": "Сброс переключателя", "T": "T", "IEC": "O", "CORP": "O"}, {"NAME": "Auto", "CDC": "SPC", "EXPLANATION": "Автоматический/ручной режим", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Vred1", "CDC": "SPC", "EXPLANATION": "Шаг по напряжению", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Master", "CDC": "SPC", "EXPLANATION": "Режим ведущий при параллельной работе", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "Follower", "CDC": "SPC", "EXPLANATION": "Режим ведомый при параллельной работе", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CtlBB", "CDC": "INC", "EXPLANATION": "Выбор регулируемой секции", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "MntrBB", "CDC": "INC", "EXPLANATION": "Выбор контролируемой секции", "T": "", "IEC": "E", "CORP": "O"}],
+"PARAMS": [{"NAME": "CtlV", "CDC": "MV", "EXPLANATION": "Напряжение на регулируемых шинах", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "LodA", "CDC": "MV", "EXPLANATION": "Нагрузочный ток", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CircA", "CDC": "MV", "EXPLANATION": "Уравнительный ток", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PhAng", "CDC": "MV", "EXPLANATION": "Фазный угол между током нагрузки и регулируемым напряжением", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HiCtlV", "CDC": "MV", "EXPLANATION": "Самое высокое регулируемое напряжение с момента последнего перезапуска", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LoCtlV", "CDC": "MV", "EXPLANATION": "Самое низкое регулируемое напряжение с момента последнего перезапуска", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HiDmdA", "CDC": "MV", "EXPLANATION": "Ток нагрузки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BndCtr", "CDC": "ASG", "EXPLANATION": "Напряжение поддержания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BndWid", "CDC": "ASG", "EXPLANATION": "Ширина зоны нечувствительности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CtlDlTmms", "CDC": "ING", "EXPLANATION": "Управление выдержкой времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LDCR", "CDC": "ASG", "EXPLANATION": "Падение напряжения по активной составляющей", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LDCX", "CDC": "ASG", "EXPLANATION": "Падение напряжения по реактивной составляющей", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkLV", "CDC": "ASG", "EXPLANATION": "Нижняя уставка напряжению для блокировки команд понижения положения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkRV", "CDC": "ASG", "EXPLANATION": "Верхняя уставка напряжению для блокировки команд повышения положения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkVLo", "CDC": "ASG", "EXPLANATION": "Нижняя уставка напряжению для блокировки команд повышения положения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkVHi", "CDC": "ASG", "EXPLANATION": "Верхняя уставка напряжению для блокировки команд понижения положения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RnbkRV", "CDC": "ASG", "EXPLANATION": "Напряжение возврата", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LimLodA", "CDC": "ASG", "EXPLANATION": "Граница блокировки по нагрузочному току", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LDC", "CDC": "SPG", "EXPLANATION": "Модель компенсации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ParTraMod", "CDC": "ENG", "EXPLANATION": "Режим параллельной трансформации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmDlChr", "CDC": "SPG", "EXPLANATION": "Линейная или обратная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LDCZ", "CDC": "ASG", "EXPLANATION": "Сопротивление линии для компенсации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "VredVal", "CDC": "ASG", "EXPLANATION": "Уменьшение напряжения нейтрального положения (в процентах) при понижении положения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TapBlkR", "CDC": "ING", "EXPLANATION": "Крайнее верхнее положение для блокировки команды прибавить", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TapBlkL", "CDC": "ING", "EXPLANATION": "Крайнее нижнее положение для блокировки команды убавить", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C1":"Условие - в зависимости от метода регулирования как минимум один из двух объектов TapChg или TapPos должен быть использован. BndCtrChg может опционально использоваться для изменения значения BndCtr с помощью команд"}]
+}
+,
+{
+"CLASS": "CALH",
+"EXPLAN": "Управление сигнализацией",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на один групповой сигнал или на группу сигналов с приоритетами. Экземпляры ЛУ размещаются в соответствующих логических устройствах.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Выдача статуса групповой сигнализации по приоритетам"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GrAlm", "CDC": "SPS", "EXPLANATION": "Групповая сигнализация", "T": "", "IEC": "C", "CORP": "C"}, {"NAME": "GrWrn", "CDC": "SPS", "EXPLANATION": "Групповое предупреждение", "T": "", "IEC": "C", "CORP": "C"}, {"NAME": "GrInd", "CDC": "SPS", "EXPLANATION": "Групповая индикация", "T": "", "IEC": "C", "CORP": "C"}, {"NAME": "AlmLstOv", "CDC": "SPS", "EXPLANATION": "Журнал сигнализаций переполнен", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [],
+"COND": [{"C":"Хотя бы один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "CCGR",
+"EXPLAN": "Групповое управление охлаждением",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на одну группу охлаждения. Экземпляры ЛУ размещаются в соответствующих логических устройствах.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Выдача статусов системы охлаждения", "Управление системой охлаждения"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FanOvCur", "CDC": "SPS", "EXPLANATION": "Отключения вентилятора по току", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PmpOvCur", "CDC": "SPS", "EXPLANATION": "Отключение насоса по току", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PmpAlm", "CDC": "SPS", "EXPLANATION": "Потеря насоса", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "CEBlk", "CDC": "SPC", "EXPLANATION": "Управление автоматическим / ручным управлением (блокировкой)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "CECtl", "CDC": "SPC", "EXPLANATION": "Контроль всей охлаждающей группы (насосы и вентиляторы)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PmpCtlGen", "CDC": "ENC", "EXPLANATION": "Управление всеми насосами", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PmpCtl", "CDC": "ENC", "EXPLANATION": "Управление одним насосом", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "FanCtlGen", "CDC": "ENC", "EXPLANATION": "Управление всеми вентиляторами", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "FanCtl", "CDC": "ENC", "EXPLANATION": "Управление одним вентилятором", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Auto", "CDC": "SPC", "EXPLANATION": "Автоматический или ручной режим", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "EnvTmp", "CDC": "MV", "EXPLANATION": "Температура окружающей среды", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OilTmpIn", "CDC": "MV", "EXPLANATION": "Температура масла внутри охладителя", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OilTmpOut", "CDC": "MV", "EXPLANATION": "Температура масла за пределами охладителя", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OilMotA", "CDC": "MV", "EXPLANATION": "Ток масляного насоса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FanFlw", "CDC": "MV", "EXPLANATION": "Воздушный поток вентилятора", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CETmpIn", "CDC": "MV", "EXPLANATION": "Температура во вторичной охлаждающей среде", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CETmpOut", "CDC": "MV", "EXPLANATION": "Температура за пределами вторичной охлаждающей среды", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CEPres", "CDC": "MV", "EXPLANATION": "Давление вторичной охлаждающей среды", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CEFlw", "CDC": "MV", "EXPLANATION": "Поток вторичной охлаждающей среды", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FanA", "CDC": "MV", "EXPLANATION": "Ток привода вентилятора", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OilTmpSet", "CDC": "ASG", "EXPLANATION": "Уставка по температуре масла", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "CILO",
+"EXPLAN": "Оперативная блокировка",
+"SHORT": "ОБ",
+"USAGE": "Применяется один экземпляр ЛУ на один КА. Экземпляры ЛУ размещаются логических устройствах управления АСУ ТП.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Выдача разрешения размыкания/замыкания КА"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EnaOpn", "CDC": "SPS", "EXPLANATION": "Разрешить операцию Отключить", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "EnaCls", "CDC": "SPS", "EXPLANATION": "Разрешить операцию Включить", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RelOp", "CDC": "SPC", "EXPLANATION": "Деблокировка управления", "T": "", "IEC": "E", "CORP": "M"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "CSWI",
+"EXPLAN": "Оперативное управление коммутационным аппаратом",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на один КА. Экземпляры ЛУ размещаются логических устройствах управления АСУ ТП или в АУВ РЗА. При реализации пофазной ОБР используется один экземпляр на фазу.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Выдача статуса управления", "Управление КА"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpOpn", "CDC": "ACT", "EXPLANATION": "Операция - Отключить аппарат", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "SelOpn", "CDC": "SPS", "EXPLANATION": "Предварительный выбор - Отключить аппарат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpCls", "CDC": "ACT", "EXPLANATION": "Операция - Включить аппарат", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "SelCls", "CDC": "SPS", "EXPLANATION": "Предварительный выбор - Включить аппарат", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Pos", "CDC": "DPC", "EXPLANATION": "Положение (общее)", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "PosA", "CDC": "DPC", "EXPLANATION": "Положение - фаза А", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PosB", "CDC": "DPC", "EXPLANATION": "Положение - фаза B", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PosC", "CDC": "DPC", "EXPLANATION": "Положение - фаза C", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "GSAL",
+"EXPLAN": "Приложение безопасности",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на девайс. ЛУ размещается в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Сигналы безопасност"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "AuthFail", "CDC": "SEC", "EXPLANATION": "Ошибки авторизации", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "AcsCtlFail", "CDC": "SEC", "EXPLANATION": "Ошибки контроля доступа", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "SvcViol", "CDC": "SEC", "EXPLANATION": "Нарушения служебных привилегий", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Ina", "CDC": "SEC", "EXPLANATION": "Неактивные ассоциации", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "NumCntRs", "CDC": "INS", "EXPLANATION": "Количество сбросов счетчика операций", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "IHMI",
+"EXPLAN": "Человеко-машинный интерфейс",
+"SHORT": "ЧМИ",
+"USAGE": "Применяется один экземпляр ЛУ на один интерфейс. В случае реализации ЧМИ на ИЭУ, данный ЛУ размещается в системном логическом устройстве.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Отображение статуса ЧМИ", "Управление местом управления"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "KFAN",
+"EXPLAN": "Вентилятор",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на один вентилятор или группу вентиляторов. Экземпляры ЛУ размещаются в соответствующих логических устройствах.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Отображение статуса", "Управление вентилятором"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCtl", "CDC": "SPC", "EXPLANATION": "Срабатывание вентилятора", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "SpdSpt", "CDC": "APC", "EXPLANATION": "Уставка по скорости вращения (при возможности регулирования)", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "Spd", "CDC": "MV", "EXPLANATION": "Скорость вращения вентилятора", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmm", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания в минутах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmm", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания в минутах", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Только один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "KPMP",
+"EXPLAN": "Насос",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на один насос или группу насосов. Экземпляры ЛУ размещаются в соответствующих логических устройствах",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Отображение статуса", "Управление насосом"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCtl", "CDC": "SPC", "EXPLANATION": "Срабатывание насоса", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "SpdSpt", "CDC": "APC", "EXPLANATION": "Уставка по скорости вращения привода (при возможности регулирования)", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "Spd", "CDC": "MV", "EXPLANATION": "Скорость вращения привода насоса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmm", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания в минутах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmm", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания в минутах", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Только один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "KVLV",
+"EXPLAN": "Клапан",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на один клапан или группу клапанов. Экземпляры ЛУ размещаются в соответствующих логических устройствах.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Отображение статуса", "Управление клапаном"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCnt", "CDC": "INS", "EXPLANATION": "Счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ClsPos", "CDC": "SPS", "EXPLANATION": "Достигнута позиция закрытия", "T": "", "IEC": "C1", "CORP": "M"}, {"NAME": "OpnPos", "CDC": "SPS", "EXPLANATION": "Достигнута позиция открытия", "T": "", "IEC": "C1", "CORP": "M"}, {"NAME": "Mvm", "CDC": "SPS", "EXPLANATION": "Клапан движется", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Stuck", "CDC": "SPS", "EXPLANATION": "Клапан заблокирован", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PosSpt", "CDC": "APC", "EXPLANATION": "Уставка позиции клапана", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Pos", "CDC": "DPC", "EXPLANATION": "Положение клапана (полное открытие/закрытие)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PosChg", "CDC": "BSC", "EXPLANATION": "Изменить положение (стоп, ниже, выше)", "T": "", "IEC": "C2", "CORP": "M"}, {"NAME": "PosChgIncr", "CDC": "INC", "EXPLANATION": "Интервальное изменение положения клапана", "T": "", "IEC": "C2", "CORP": "M"}, {"NAME": "BlkOpn", "CDC": "SPC", "EXPLANATION": "Блокировка открытия клапана", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "BlkCls", "CDC": "SPC", "EXPLANATION": "Блокировка закрытия клапана", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "PosVlv", "CDC": "MV", "EXPLANATION": "Позиция клапана", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Flw", "CDC": "MV", "EXPLANATION": "Расчетный поток жидкости через клапан", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpnLim", "CDC": "ASG", "EXPLANATION": "Предел на открытие клапана", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ClsLim", "CDC": "ASG", "EXPLANATION": "Предел на закрытие клапана", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Incr", "CDC": "ASG", "EXPLANATION": "Интервал изменения положения клапана при изменении положения", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C1":"Как минимум один объект данных должен использоваться"}, {"C2":"Использование этих объектов данных опционально, но только один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "MMDC",
+"EXPLAN": "Измерения постоянного тока",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на одну точку измерения. Экземпляры ЛУ размещаются в логических устройствах измерений.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Измерения в СОПТ"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "Amp", "CDC": "MV", "EXPLANATION": "Ток нагрузки аккумуляторной батареи", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Vol", "CDC": "MV", "EXPLANATION": "Напряжение между полюсами + и - секции ЩПТ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "VolPsGnd", "CDC": "MV", "EXPLANATION": "Напряжение полюса + секции ЩПТ относительно земли", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "VolNgGnd", "CDC": "MV", "EXPLANATION": "Напряжение полюса - секции ЩПТ относительно земли", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Ris", "CDC": "MV", "EXPLANATION": "Сопротивление изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RisPsGnd", "CDC": "MV", "EXPLANATION": "Сопротивление изоляции полюса + относительно земли", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RisNGGnd", "CDC": "MV", "EXPLANATION": "Сопротивление полюса - относительно земли", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "MMTR",
+"EXPLAN": "Трехфазный учет ЭЭ",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на одну точку учета. Экземпляры ЛУ размещаются в логических устройствах измерений.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Подсчет ЭЭ"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "TotVAh", "CDC": "BCR", "EXPLANATION": "Суммарная полная энергия", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TotWh", "CDC": "BCR", "EXPLANATION": "Суммарная активная энергия", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TotVArh", "CDC": "BCR", "EXPLANATION": "Суммарная реактивная энергия", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "SupWh", "CDC": "BCR", "EXPLANATION": "Активная энергия (направление - к шинам)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SupVArh", "CDC": "BCR", "EXPLANATION": "Реактивная энергия (направление - к шинам)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DmdWh", "CDC": "BCR", "EXPLANATION": "Активная энергия (направление - от шин)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DmdVArh", "CDC": "BCR", "EXPLANATION": "Реактивная энергия (направление - от шин)", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "MMXU",
+"EXPLAN": "Трехфазные измерения",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на одну точку измерения. Экземпляры ЛУ размещаются в логических устройствах измерений.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение режимных измерений", "Ведение статистики"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "TotW", "CDC": "MV", "EXPLANATION": "Суммарная активная мощность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TotVAr", "CDC": "MV", "EXPLANATION": "Суммарная реактивная мощность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TotVA", "CDC": "MV", "EXPLANATION": "Суммарная полная мощность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TotPF", "CDC": "MV", "EXPLANATION": "Суммарный коэффициент мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Hz", "CDC": "MV", "EXPLANATION": "Частота", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PPV", "CDC": "DEL", "EXPLANATION": "Напряжения фаза-фаза", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PNV", "CDC": "WYE", "EXPLANATION": "Напряжения фаза- нейтраль", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PhV", "CDC": "WYE", "EXPLANATION": "Напряжения фаза- земля", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "A", "CDC": "WYE", "EXPLANATION": "Фазные токи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "W", "CDC": "WYE", "EXPLANATION": "Пофазная активная мощность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Var", "CDC": "WYE", "EXPLANATION": "Пофазная реактивная мощность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "VA", "CDC": "WYE", "EXPLANATION": "Пофазная полная мощность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PF", "CDC": "WYE", "EXPLANATION": "Пофазный коэффициент мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Z", "CDC": "WYE", "EXPLANATION": "Пофазное полное сопротивление", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ZPP", "CDC": "DEL", "EXPLANATION": "Междуфазное полное сопротивление", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "AvAPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение тока", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvPPVPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение междуфазного напряжения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvPhVPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение фазного напряжения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvWPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение активной мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvVAPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение полной мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvVArPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение реактивной мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvPFPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение коэффициента мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AvZPhs", "CDC": "MV", "EXPLANATION": "Среднее арифметическое значение фазного сопротивления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxAPhs", "CDC": "MV", "EXPLANATION": "Максимальная амплитуда тока для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxPPVPhs", "CDC": "MV", "EXPLANATION": "Максимальная амплитуда междуфазного напряжения для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxPhVPhs", "CDC": "MV", "EXPLANATION": "Максимальная амплитуда фазного напряжения для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxWPhs", "CDC": "MV", "EXPLANATION": "Максимальный модуль активной мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxVAPhs", "CDC": "MV", "EXPLANATION": "Максимальный модуль полной мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxVArPhs", "CDC": "MV", "EXPLANATION": "Максимальный модуль реактивной мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxPFPhs", "CDC": "MV", "EXPLANATION": "Максимальный коэффициент мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxZPhs", "CDC": "MV", "EXPLANATION": "Максимальный модуль полного сопротивления для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxPPZPhs", "CDC": "MV", "EXPLANATION": "Максимальный модуль полного междуфазного сопротивления для трех фаз", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "MinAPhs", "CDC": "MV", "EXPLANATION": "Минимальная амплитуда тока для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinPPVPhs", "CDC": "MV", "EXPLANATION": "Минимальная амплитуда междуфазного напряжения для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinPhVPhs", "CDC": "MV", "EXPLANATION": "Минимальная амплитуда фазного напряжения для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinWPhs", "CDC": "MV", "EXPLANATION": "Минимальный модуль активной мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinVAPhs", "CDC": "MV", "EXPLANATION": "Минимальный модуль полной мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinVArPhs", "CDC": "MV", "EXPLANATION": "Минимальный модуль реактивной мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinPFPhs", "CDC": "MV", "EXPLANATION": "Минимальный коэффициент мощности для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinZPhs", "CDC": "MV", "EXPLANATION": "Минимальный модуль полного сопротивления для трех фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinPPZPhs", "CDC": "MV", "EXPLANATION": "Минимальный модуль полного междуфазного сопротивления для трех фаз", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "ClcTotVA", "CDC": "ENG", "EXPLANATION": "Метод расчета суммарной полной мощности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PFSign", "CDC": "ENG", "EXPLANATION": "Присвоение знака реактивной мощности и коэффициента мощности", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "MSQI",
+"EXPLAN": "Последовательность и небаланс",
+"SHORT": "",
+"USAGE": "Применяется один экземпляр ЛУ на одну точку измерения. Экземпляры ЛУ размещаются в логических устройствах измерений.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение симметричных составляющих", "Ведение статистики"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "SeqA", "CDC": "SEQ", "EXPLANATION": "Ш1, ОП, НП тока", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "SeqV", "CDC": "SEQ", "EXPLANATION": "Ш1, ОП, НП напряжения", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "DQ0Seq", "CDC": "SEQ", "EXPLANATION": "DQ0 последовательность", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbA", "CDC": "WYE", "EXPLANATION": "Ток небаланса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbNgA", "CDC": "MV", "EXPLANATION": "Ток небаланса ОП", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbNgV", "CDC": "MV", "EXPLANATION": "Напряжения небаланса ОП", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbPPV", "CDC": "DEL", "EXPLANATION": "Междуфазное напряжение небаланса", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ImbV", "CDC": "WYE", "EXPLANATION": "Напряжение небаланса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbZroA", "CDC": "MV", "EXPLANATION": "Ток небаланса НП", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbZroV", "CDC": "MV", "EXPLANATION": "Напряжение небаланса НП", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxImbA", "CDC": "MV", "EXPLANATION": "Максимальный ток небаланса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxImbPPV", "CDC": "MV", "EXPLANATION": "Максимальное междуфазное напряжение небаланса", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxImbV", "CDC": "MV", "EXPLANATION": "Максимальное напряжение небаланса", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Хотя бы один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "PDIF",
+"EXPLAN": "Дифференциальная защита",
+"SHORT": "",
+"USAGE": "Применяется для реализации ДЗЛ, ДЗТ, ДЗШ. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Мониторинг параметров", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}, {"NAME": "TmASt", "CDC": "CSD", "EXPLANATION": "Активная характеристика", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TopDistr", "CDC": "SPS", "EXPLANATION": "Нарушение фиксации", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "ImbCurBlk", "CDC": "SPS", "EXPLANATION": "Блокировка при превышении тока небаланса", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "DifAClc", "CDC": "WYE", "EXPLANATION": "Дифференциальный ток", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RstA", "CDC": "WYE", "EXPLANATION": "Ток торможения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ImbCur", "CDC": "WYE", "EXPLANATION": "Ток небаланса", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LinCapac", "CDC": "ASG", "EXPLANATION": "Емкости линии электропередачи (для нагрузочных токов)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LoSet", "CDC": "ASG", "EXPLANATION": "Нижний порог срабатывания (процент от номинального тока)", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "HiSet", "CDC": "ASG", "EXPLANATION": "Верхний порог срабатывания (процент от номинального тока)", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "ImbCurVal", "CDC": "ASG", "EXPLANATION": "Уставка по току небаланса", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RstMod", "CDC": "ENG", "EXPLANATION": "Режим торможения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmACrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmAChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Только один объект данных должен быть использован, если используется"}]
+}
+,
+{
+"CLASS": "PDIR",
+"EXPLAN": "Сравнение направления",
+"SHORT": "",
+"USAGE": "Применяется для защит, работающих по принципу сравнения направления. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск (направленный пуск по одному присоединению)", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание (направленный пуск по всем присоединениям)", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PDIS",
+"EXPLAN": "Дистанционная защита",
+"SHORT": "ДЗ",
+"USAGE": "Применяется для реализации ДЗ ФФ и ФЗ. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "PoRch", "CDC": "ASG", "EXPLANATION": "Диаметр круговой характеристики срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PhStr", "CDC": "ASG", "EXPLANATION": "Уставка пускового органа по фазным величинам", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GndStr", "CDC": "ASG", "EXPLANATION": "Уставка пускового органа по составляющим нулевой последовательности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PctRch", "CDC": "ASG", "EXPLANATION": "Охват линии электропередачи (в процентах от длины линии)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Ofs", "CDC": "ASG", "EXPLANATION": "Смещение", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PctOfs", "CDC": "ASG", "EXPLANATION": "Смещение характеристики в процентах от длины линии", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RisLod", "CDC": "ASG", "EXPLANATION": "Сопротивление нагрузки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AngLod", "CDC": "ASG", "EXPLANATION": "Угол нагрузки", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmDlMod", "CDC": "SPG", "EXPLANATION": "Ввод выдержки времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PhDlMod", "CDC": "SPG", "EXPLANATION": "Выдержка времени на срабатывание для контура фаза-фаза", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PhDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание для многофазных КЗ", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "GndDlMod", "CDC": "SPG", "EXPLANATION": "Выдержка времени на срабатывание для контура фаза-земля", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "GndDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание для однофазных КЗ на землю", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "X1", "CDC": "ASG", "EXPLANATION": "Реактивное сопротивление прямой последовательности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LinAng", "CDC": "ASG", "EXPLANATION": "Угол линии", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RisGndRch", "CDC": "ASG", "EXPLANATION": "Сопротивление по контуру фаза-земля", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RisPhRch", "CDC": "ASG", "EXPLANATION": "Сопротивление по контуру фаза-фаза", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "K0Fact", "CDC": "ASG", "EXPLANATION": "Коэффициент компенсации нулевой последовательности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "K0FactAng", "CDC": "ASG", "EXPLANATION": "Угол компенсации нулевой последовательности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": []
+}
+,
+{
+"CLASS": "PDOP",
+"EXPLAN": "Направленная защита по мощности",
+"SHORT": "",
+"USAGE": "Применяется для реализации направленной защиты по мощности. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по мощности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PDUP",
+"EXPLAN": "Направленная защита минимальной мощности",
+"SHORT": "",
+"USAGE": "Применяется для реализации защиты по минимальной активной мощности. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по мощности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PFRC",
+"EXPLAN": "Защита по скорости изменения частоты",
+"SHORT": "",
+"USAGE": "Применяется для реализации защиты по скорости изменения частоты (ДАР). Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}, {"NAME": "BlkV", "CDC": "SPS", "EXPLANATION": "Блокировка по напряжению", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка df/dt", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "BlkVal", "CDC": "ASG", "EXPLANATION": "Уставка по напряжению блокировки", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PHAR",
+"EXPLAN": "Торможение по гармоникам",
+"SHORT": "",
+"USAGE": "Применяется для реализации торможения по гармоническим составляющим соответствующих функций защит (ДЗТ, ДЗШ). Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "HaRst", "CDC": "ING", "EXPLANATION": "Номер гармоники, по которой выполняется торможение", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PhStr", "CDC": "ASG", "EXPLANATION": "Уставка начала торможения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PhStop", "CDC": "ASG", "EXPLANATION": "Уставка завершения торможения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PHIZ",
+"EXPLAN": "Сигнализация замыкания на землю",
+"SHORT": "",
+"USAGE": "Применяется для реализации сигнализации замыкания на землю. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Astr", "CDC": "ASG", "EXPLANATION": "Уставка по току", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "VStr", "CDC": "ASG", "EXPLANATION": "Уставка по напряжению", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HVStr", "CDC": "ASG", "EXPLANATION": "Уставка по напряжению 3- ей гармоники", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PIOC",
+"EXPLAN": "Токовая отсечка",
+"SHORT": "ТО",
+"USAGE": "Применяется для реализации токового контроля для ЗДЗ, а также защиты от пробоя плеча. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по току", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": []
+}
+,
+{
+"CLASS": "PSCH",
+"EXPLAN": "Защита с разрешающими/блокирующими сигналами",
+"SHORT": "",
+"USAGE": "Применяется для реализации защит линий по разрешающим/блокирующим сигналам. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Паспортные данные", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TxPrm", "CDC": "ACT", "EXPLANATION": "Формирование разрешающего сигнала для передачи на противоположный конец", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "TxBlk", "CDC": "ACT", "EXPLANATION": "Формирование блокирующего сигнала для передачи на противоположный конец", "T": "T", "IEC": "O", "CORP": "O"}, {"NAME": "TxTr", "CDC": "ACT", "EXPLANATION": "Формирования сигнала телеотключения на противоположный конец", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "RxPrm1", "CDC": "ACT", "EXPLANATION": "Получение разрешающего сигнала с противоположного конца", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "RxBlk1", "CDC": "ACT", "EXPLANATION": "Получение блокирующего сигнала с противоположного конца", "T": "T", "IEC": "O", "CORP": "O"}, {"NAME": "RxTr1", "CDC": "ACT", "EXPLANATION": "Получение сигнала телеотключения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}, {"NAME": "EchoWei", "CDC": "SPS", "EXPLANATION": "Передача разрешающего сигнала как эхо-сигнала или при слабой подпитке", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "EchoWeiOp", "CDC": "SPS", "EXPLANATION": "Дополнительная индикация того, что сигнал срабатывания сформирован эхо- функцией или при слабой подпитке (с контролем минимального напряжения)", "T": "T", "IEC": "O", "CORP": "M"}, {"NAME": "ARvsDet", "CDC": "SPS", "EXPLANATION": "Блокировка при реверсе", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "RxSrc1", "CDC": "ORG", "EXPLANATION": "Источник формирования разрешающего или блокирующего сигнала", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RxSrcTr1", "CDC": "ORG", "EXPLANATION": "Источник сигнала телеотключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CrdTmms", "CDC": "ING", "EXPLANATION": "Таймер согласования для схемы с передачей блокирующего сигнала", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DurTmms", "CDC": "ING", "EXPLANATION": "Минимальная длительность передачи разрешающего сигнала", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "UnBlkMod", "CDC": "ENG", "EXPLANATION": "Режим функции разблокировки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "UnBlkTmms", "CDC": "ING", "EXPLANATION": "Время разблокировки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "WeiMod", "CDC": "ENG", "EXPLANATION": "Режим работы функции слабой подпитки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "WeiTmms", "CDC": "ING", "EXPLANATION": "Таймер согласования для функции слабой подпитки", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PSDE",
+"EXPLAN": "Направленная защита от однофазных замыканий на землю",
+"SHORT": "",
+"USAGE": "Применяется для реализации ЗОЗЗ. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FltIndRs", "CDC": "SPC", "EXPLANATION": "Сигнализация о замыкании на землю", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "Ang", "CDC": "ASG", "EXPLANATION": "Угол между током и напряжением нулевой последовательности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GndStr", "CDC": "ASG", "EXPLANATION": "Уставка по 3U0", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GndOp", "CDC": "ASG", "EXPLANATION": "Уставка по 3I0", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "StrDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на пуск", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTEF",
+"EXPLAN": "Сигнализация замыкания на землю",
+"SHORT": "",
+"USAGE": "Применяется для реализации сигнализации замыкания на землю. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "C", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FltIndRs", "CDC": "SPC", "EXPLANATION": "Сигнализация о замыкании на землю", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "GndStr", "CDC": "ASG", "EXPLANATION": "Уставка", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Как миниму один из объектов должен быть использован"}]
+}
+,
+{
+"CLASS": "PTHF",
+"EXPLAN": "Защита тиристорного управления",
+"SHORT": "",
+"USAGE": "Применяется для реализации защит тиристорного управления. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка пуска", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "E", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTOC",
+"EXPLAN": "Максимальная токовая защита",
+"SHORT": "МТЗ",
+"USAGE": "Применяется для реализации защит по превышению тока (МФТО, МТЗ, НМТЗ, ТЗОП, ТЗНП, ТНЗНП, ЗНФ, ЗОП, ЗПВГ). Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "TmACrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmAChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmASt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по току", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmMult", "CDC": "ASG", "EXPLANATION": "Множитель", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TypRsCrv", "CDC": "ENG", "EXPLANATION": "Тип характеристики возврата", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTOF",
+"EXPLAN": "Защита от повышения частоты",
+"SHORT": "ЗПЧ",
+"USAGE": "Применяется для реализации защит по превышению частоты. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}, {"NAME": "BlkV", "CDC": "SPS", "EXPLANATION": "Блокировка по напряжению", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по частоте", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "BlkVal", "CDC": "ASG", "EXPLANATION": "Уставка блокировки по напряжению", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTOV",
+"EXPLAN": "Защита максимального напряжения",
+"SHORT": "ЗПН",
+"USAGE": "Применяется для реализации защит по превышению напряжения. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "TmVCrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmVChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmVSt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по напряжению", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmMult", "CDC": "ASG", "EXPLANATION": "Множитель", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTRC",
+"EXPLAN": "Общий сигнал срабатывания защит",
+"SHORT": "",
+"USAGE": "Применяется для реализации объединения сигналов защит для выдачи отключающего воздействия. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Tr", "CDC": "ACT", "EXPLANATION": "Отключение", "T": "", "IEC": "C", "CORP": "C"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание (объединяет сигналы срабатывания отдельных функций)", "T": "", "IEC": "C", "CORP": "C"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск (объединяет сигналы пуска отдельных функций)", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "TrMod", "CDC": "ENG", "EXPLANATION": "Режим отключения (трехфазное/однофазное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TrPlsTmms", "CDC": "ING", "EXPLANATION": "Длительность импульса отключения", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Хотя бы один объект данных должен быть использован (Tr, Op)"}]
+}
+,
+{
+"CLASS": "PTTR",
+"EXPLAN": "Защита от термической перегрузки",
+"SHORT": "",
+"USAGE": "Применяется для реализации защит по термической перегрузке. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Мониторинг параметров", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}, {"NAME": "AlmThm", "CDC": "SPS", "EXPLANATION": "Сигнализация превышения температуры", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "BlkThm", "CDC": "SPS", "EXPLANATION": "Блокировка включения силового выключателя из-за превышения температуры", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Amp", "CDC": "MV", "EXPLANATION": "Ток для термической модели", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Tmp", "CDC": "MV", "EXPLANATION": "Температура для термической модели", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmpRl", "CDC": "MV", "EXPLANATION": "Соотношение между рабочей и максимальной температурой", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LodRsvAlm", "CDC": "MV", "EXPLANATION": "Резерв по нагрузке до сигнализации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LodRsvTr", "CDC": "MV", "EXPLANATION": "Резерв по нагрузке до отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmTmpCrv", "CDC": "CURVE", "EXPLANATION": "Характеристика измерения температуры", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmTmpChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmACrv", "CDC": "CURVE", "EXPLANATION": "Характеристика для измерения тока /Термическая модель", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmAChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmTmpSt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmASt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmpMax", "CDC": "ASG", "EXPLANATION": "Максимально допустимая температура", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по температуре", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ConsTms1", "CDC": "ING", "EXPLANATION": "Постоянная времени термической модели", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AlmVal", "CDC": "ASG", "EXPLANATION": "Уставка сигнализации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DropoutVal", "CDC": "ASG", "EXPLANATION": "Уставка возврата сигнала блокировки включения", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTUC",
+"EXPLAN": "Минимальная токовая защита",
+"SHORT": "ЗМТ",
+"USAGE": "Применяется для реализации защит по понижению тока. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "TmACrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmAChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmASt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по току", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmMult", "CDC": "ASG", "EXPLANATION": "Множитель", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TypRsCrv", "CDC": "ENG", "EXPLANATION": "Тип характеристики возврата", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTUF",
+"EXPLAN": "Защита минимальной частоты",
+"SHORT": "ЗМЧ",
+"USAGE": "Применяется для реализации защит по понижению частоты электического тока. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}, {"NAME": "BlkV", "CDC": "SPS", "EXPLANATION": "Блокировка по напряжению", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по частоте", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "BlkVal", "CDC": "ASG", "EXPLANATION": "Уставка блокировки по напряжению", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PTUV",
+"EXPLAN": "Защита минимального напряжения",
+"SHORT": "ЗМН",
+"USAGE": "Применяется для реализации защит по понижению напряжения (ЗМН). Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Мониторинг параметров", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "TmVCrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmVChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmVSt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "StrVal", "CDC": "ASG", "EXPLANATION": "Уставка по пуску", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmMult", "CDC": "ASG", "EXPLANATION": "Множитель", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "PVOC",
+"EXPLAN": "Максимальная токовая защита с выдержкой времени с пуском по напряжению",
+"SHORT": "",
+"USAGE": "Применяется для реализации МТЗ с комбинированным пуском по напряжению. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание", "T": "T", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "AVCrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания I(U)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AVChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TmACrv", "CDC": "CURVE", "EXPLANATION": "Тип характеристики срабатывания t(I)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmAChr33", "CDC": "CSG", "EXPLANATION": "Многосегментная характеристика срабатывания", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "AVSt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени I(U)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmASt", "CDC": "CSD", "EXPLANATION": "Активная характеристика выдержки времени I(t)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmMult", "CDC": "ASG", "EXPLANATION": "Множитель", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinOpTmms", "CDC": "ING", "EXPLANATION": "Минимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpTmms", "CDC": "ING", "EXPLANATION": "Максимальное время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на срабатывание", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TypRsCrv", "CDC": "ENG", "EXPLANATION": "Тип характеристики возврата", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RsDlTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на возврат", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DirMod", "CDC": "ENG", "EXPLANATION": "Режим направленности", "T": "", "IEC": "E", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "RADR",
+"EXPLAN": "Аналоговый канал регистратора аварийных событий",
+"SHORT": "",
+"USAGE": "Применяется для реализации аналогового канала локального или автономного РАС. Применяется один экземпляр ЛУ на один регистрируемый аналоговый сигнал. Экземпляры ЛУ размещаются в логических устройствах РАС.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Срабатывание канала", "Уставки", "Сохранение записи канала в COMTRADE-файл осциллограмм"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ChTrg", "CDC": "SPS", "EXPLANATION": "Срабатывание канала", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Access via COMTRADE only", "CDC": "", "EXPLANATION": "Канал аналогового входа", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "ChNum1", "CDC": "ING", "EXPLANATION": "Номер канала", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "TrgMod", "CDC": "ENG", "EXPLANATION": "Режим пуска записи (автоматический пуск по заданным условиям, внешний пуск, оба).", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LevMod", "CDC": "ENG", "EXPLANATION": "Режим пуска записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HiTrgLev", "CDC": "ASG", "EXPLANATION": "Высокое значение порога", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LoTrgLev", "CDC": "ASG", "EXPLANATION": "Низкое значение порога", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PreTmms", "CDC": "ING", "EXPLANATION": "Длительность доаварийной записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PstTmms", "CDC": "ING", "EXPLANATION": "Длительность послеаварийной записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SrcRef", "CDC": "ORG", "EXPLANATION": "Ссылка на объект данных источника МЭК 61850", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Несколько экземпляров ChNum допускаются только в случае составных типов данных (например, общий класс данных WYE). Количество должно быть таким же, как в указанном объкте данных"}]
+}
+,
+{
+"CLASS": "RBDR",
+"EXPLAN": "Дискретный канал регистратора аварийных событий",
+"SHORT": "",
+"USAGE": "Применяется для реализации дискретного канала локального или автономного РАС. Применяется один экземпляр ЛУ на один регистрируемый дискретный сигнал. Экземпляры ЛУ размещаются в логических устройствах РАС.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Срабатывание канала", "Уставки", "Сохранение записи канала в COMTRADE-файл осциллограмм"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ChTrg", "CDC": "SPS", "EXPLANATION": "Срабатывание канала", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Access via COMTRADE only", "CDC": "", "EXPLANATION": "Канал дискретного входа", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "ChNum1", "CDC": "ING", "EXPLANATION": "Номер канала", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TrgMod", "CDC": "ENG", "EXPLANATION": "Режим пуска записи (автоматический пуск по заданным условиям, внешний пуск, оба).", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LevMod", "CDC": "ENG", "EXPLANATION": "Режим пуска записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PreTmms", "CDC": "ING", "EXPLANATION": "Длительность доаварийной записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PstTmms", "CDC": "ING", "EXPLANATION": "Длительность послеаварийной записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SrcRef", "CDC": "ORG", "EXPLANATION": "Ссылка на объект данных источника МЭК 61850", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": [{"C":"Несколько экземпляров ChNum допускаются только в случае составных типов данных (например, для объекта данных Pos). Количество должно быть таким же, как в указанном объекте данных"}]
+}
+,
+{
+"CLASS": "RBRF",
+"EXPLAN": "Устройство резервирования отказов выключателя",
+"SHORT": "УРОВ",
+"USAGE": "Применяется для реализации УРОВ. Применяется один экземпляр ЛУ на одну ступень защиты. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpEx", "CDC": "ACT", "EXPLANATION": "Отключение от УРОВ", "T": "T", "IEC": "C", "CORP": "C"}, {"NAME": "OpIn", "CDC": "ACT", "EXPLANATION": "Действие на себя", "T": "T", "IEC": "C", "CORP": "C"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "FailMod", "CDC": "ENG", "EXPLANATION": "Режим обнаружения отказа силового выключателя", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "FailTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени УРОВ для отключения шин", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SPlTrTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на формирование повторной команды однофазного отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TPTrTmms", "CDC": "ING", "EXPLANATION": "Выдержка времени на формирование повторной команды трехфазного отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DetValA", "CDC": "ASG", "EXPLANATION": "Уставка по току", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ReTrMod", "CDC": "ENG", "EXPLANATION": "Режим повторного действия", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": [{"C":"Как минимум один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "RDIR",
+"EXPLAN": "Направленный элемент защиты",
+"SHORT": "",
+"USAGE": "Применяется для реализации ОНМ. Применяется один экземпляр ЛУ на одну ступень функции. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Dir", "CDC": "ACD", "EXPLANATION": "Направление", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "ChrAng", "CDC": "ASG", "EXPLANATION": "Угол характеристики", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MinFwdAng", "CDC": "ASG", "EXPLANATION": "Минимальный фазный угол для прямого направления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinRvAng", "CDC": "ASG", "EXPLANATION": "Минимальный фазный угол для обратного направления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxFwdAng", "CDC": "ASG", "EXPLANATION": "Максимальный фазный угол для прямого направления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxRvAng", "CDC": "ASG", "EXPLANATION": "Максимальный фазный угол для обратного направления", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkValA", "CDC": "ASG", "EXPLANATION": "Минимальный рабочий ток", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkValV", "CDC": "ASG", "EXPLANATION": "Минимальное рабочее напряжение", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Platy", "CDC": "ENG", "EXPLANATION": "Значение поляризации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MinPPV", "CDC": "ASG", "EXPLANATION": "Минимальное междуфазное напряжение", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "RDRE",
+"EXPLAN": "Регистратор аварийных событий",
+"SHORT": "РАС",
+"USAGE": "Применяется для реализации функции локального или автономного РАС. Применяется один экземпляр ЛУ на один РАС. Экземпляры ЛУ размещаются в логических устройствах РАС. Для объектов данных MemRs, MemClr и OpCntRs атрибут данных ctlModel должен быть выставлен в значение только выдачи статуса без возможности управления status-only без возможности изменения.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Параметры работы РАС", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RcdMade", "CDC": "SPS", "EXPLANATION": "Регистрация событий завершена", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "FltNum", "CDC": "INS", "EXPLANATION": "Номер КЗ", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "GriFltNum", "CDC": "INS", "EXPLANATION": "Номер КЗЗ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RcdStr", "CDC": "SPS", "EXPLANATION": "Пуск записи", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MemUsed", "CDC": "INS", "EXPLANATION": "Использование памяти в процентах", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "RcdTrg", "CDC": "SPC", "EXPLANATION": "Внешний пуск", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MemRs", "CDC": "SPC", "EXPLANATION": "Сброс памяти регистратора (установка указателя на начало памяти)", "T": "T", "IEC": "O", "CORP": "O"}, {"NAME": "MemClr", "CDC": "SPC", "EXPLANATION": "Очистка памяти (удалить все содержимое памяти)", "T": "T", "IEC": "O", "CORP": "O"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "TrgMod", "CDC": "ENG", "EXPLANATION": "Режим пуска записи (автоматический пуск по заданным условиям, внешний пуск, оба)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LevMod", "CDC": "ENG", "EXPLANATION": "Режим пуска записи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PreTmms", "CDC": "ING", "EXPLANATION": "Длительность записи доаварийного режима", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PstTmms", "CDC": "ING", "EXPLANATION": "Длительность записи аварийного режима", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MemFull", "CDC": "ING", "EXPLANATION": "Переполнение памяти", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MaxNumRcd", "CDC": "ING", "EXPLANATION": "Максимальное число записей", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ReTrgMod", "CDC": "SPG", "EXPLANATION": "Режим работы при повторном пуске", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "PerTrgTms", "CDC": "ING", "EXPLANATION": "Максимальная длительность записи в секундах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ExclTmms", "CDC": "ING", "EXPLANATION": "Время игнорирования повторных пусков", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Tms", "CDC": "ING", "EXPLANATION": "Блокировка от длительного пуска в секундах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RcdMod", "CDC": "ENG", "EXPLANATION": "Режим работы при переполнении памяти (останов записи, перезапись)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "StoRte", "CDC": "ING", "EXPLANATION": "Частота дискретизации", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "RDRS",
+"EXPLAN": "Обработка записей РАС",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции инициатора выгрузки осциллограмм в хранилище РАС. Применяется один экземпляр ЛУ на один РАС. Экземпляры ЛУ размещаются в логических устройствах РАС.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": [],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "AutoUpLod", "CDC": "SPC", "EXPLANATION": "Автоматическая отправка", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "DltRcd", "CDC": "SPC", "EXPLANATION": "Удаление записи", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "RFLO",
+"EXPLAN": "Определение места повреждения",
+"SHORT": "ОМП",
+"USAGE": "Применяется для реализации функции ОМП. Применяется один экземпляр ЛУ на одно присоединение. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Определение расстояния до места повреждения"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "FltLoop", "CDC": "ENS", "EXPLANATION": "Вид КЗ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "SpPhSt", "CDC": "ENS", "EXPLANATION": "Особая фаза", "T": "", "IEC": "E", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "FltZ", "CDC": "CMV", "EXPLANATION": "Полное сопротивление КЗ", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "FltDiskm", "CDC": "MV", "EXPLANATION": "Расстояние до места КЗ", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": []
+}
+,
+{
+"CLASS": "RMXU",
+"EXPLAN": "Дифференциальные измерения",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции расчета дифференциальных измерений для нужд защит. Применяется один экземпляр ЛУ на одну группу измерений. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Выдача дифференциальных измерений"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "Aloc", "CDC": "WYE", "EXPLANATION": "Ток местного измерителя", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "AmpLocPhsA", "CDC": "SAV", "EXPLANATION": "Ток местного измерителя фазы A", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "AmpLocPhsB", "CDC": "SAV", "EXPLANATION": "Ток местного измерителя фазы B", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "AmpLocPhsC", "CDC": "SAV", "EXPLANATION": "Ток местного измерителя фазы C", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "AmpLocRes", "CDC": "SAV", "EXPLANATION": "Остаточный ток местного измерителя", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Используется Aloc или AmpLocPhsA, AmpLocPhsB, AmpLocPhsC"}]
+}
+,
+{
+"CLASS": "RPSB",
+"EXPLAN": "Обнаружение/блокировка колебаний мощности",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции блокировки при качаниях по скорости изменения сопротивления. Применяется один экземпляр ЛУ на параметры работы. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Str", "CDC": "ACD", "EXPLANATION": "Пуск (обнаружены качания)", "T": "", "IEC": "C1", "CORP": "M"}, {"NAME": "Op", "CDC": "ACT", "EXPLANATION": "Срабатывание (выход из синхронизма)", "T": "T", "IEC": "C2", "CORP": "O"}, {"NAME": "BlkZn", "CDC": "SPS", "EXPLANATION": "Блокировка дистанционной защиты", "T": "", "IEC": "C1", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "ZeroEna", "CDC": "SPG", "EXPLANATION": "Работа по нулевой последовательности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NgEna", "CDC": "SPG", "EXPLANATION": "Мониторинг тока обратной последовательности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxEna", "CDC": "SPG", "EXPLANATION": "Мониторинг пикового тока", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SwgVal", "CDC": "ASG", "EXPLANATION": "Угол качаний", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SwgRis", "CDC": "ASG", "EXPLANATION": "Активное сопротивление качаний", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SwgReact", "CDC": "ASG", "EXPLANATION": "Реактивное сопротивление качаний", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SwgTmms", "CDC": "ING", "EXPLANATION": "Время качаний", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "UnBlkTmms", "CDC": "ING", "EXPLANATION": "Время разблокировки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxNumSlp", "CDC": "ING", "EXPLANATION": "Максимальное значение изменения полярности до отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "EvTmms", "CDC": "ING", "EXPLANATION": "Временное окно оценки выхода из синхронизма", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C1":"Обязателен, если логический узел используется для блокировки при качаниях"}, {"C2":"Обязателен, если логический узел используется для обнаружения выхода из синхронизма"}]
+}
+,
+{
+"CLASS": "RREC",
+"EXPLAN": "Автоматическое повторное включение",
+"SHORT": "АПВ",
+"USAGE": "Применяется для реализации функции АПВ (ТАПВ, ОАПВ, ПАВ). Применяется один экземпляр ЛУ на одну функцию. Экземпляры ЛУ раз мещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Тип работы функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TrBeh", "CDC": "ENS", "EXPLANATION": "Статус режима АПВ (пофазное/трехфазное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RecCyc", "CDC": "INS", "EXPLANATION": "Цикл АПВ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCls", "CDC": "ACT", "EXPLANATION": "Срабатывание АПВ", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "AutoRecSt", "CDC": "ENS", "EXPLANATION": "Статус цикла АПВ", "T": "", "IEC": "M", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "SlvMod", "CDC": "SPC", "EXPLANATION": "Режим работы ведомый", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CtlMod", "CDC": "SPC", "EXPLANATION": "Режим включения с контролем/без контроля", "T": "", "IEC": "E", "CORP": "O"}],
+"PARAMS": [{"NAME": "CycTrMod1", "CDC": "ENG", "EXPLANATION": "Режим АПВ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MaxCyc", "CDC": "ING", "EXPLANATION": "Максимум циклов АПВ подряд", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "UseCyc", "CDC": "ING", "EXPLANATION": "Используемое Количество циклов АПВ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MaxTmms", "CDC": "ING", "EXPLANATION": "Максимальное время разрешения АПВ после обнаружения КЗ", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Rec1Tmms1", "CDC": "ING", "EXPLANATION": "Время АПВ для ОАПВ", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Rec13Tmms1", "CDC": "ING", "EXPLANATION": "Время АПВ для переходных КЗ", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Rec3Tmms1", "CDC": "ING", "EXPLANATION": "Время ТАПВ", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RclTmms", "CDC": "ING", "EXPLANATION": "Время возврата", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RdyTmms", "CDC": "ING", "EXPLANATION": "Время готовности АПВ", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": []
+}
+,
+{
+"CLASS": "RSYN",
+"EXPLAN": "Контроль синхронизма и напряжений",
+"SHORT": "КС",
+"USAGE": "Применяется для реализации функции КС для РЗА. Применяется один экземпляр ЛУ на параметры работы. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Пуск и срабатывание функции", "Уставки"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Rel", "CDC": "SPS", "EXPLANATION": "Разрешающий сигнал", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "Vind", "CDC": "SPS", "EXPLANATION": "Разница по напряжению вне допустимых пределов", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AngInd", "CDC": "SPS", "EXPLANATION": "Разница по фазе вне допустимых пределов", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HzInd", "CDC": "SPS", "EXPLANATION": "Разница по частоте вне допустимых пределов", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "SynPrg", "CDC": "SPC", "EXPLANATION": "Запуск/остановка процесса проверки синхронизма", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "DifVClc", "CDC": "MV", "EXPLANATION": "Вычисленная разница напряжений", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DifHzClc", "CDC": "MV", "EXPLANATION": "Вычисленная разница частот", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DifAngClc", "CDC": "MV", "EXPLANATION": "Вычисленная разница фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DifV", "CDC": "ASG", "EXPLANATION": "Уставка по допустимой разнице напряжений", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "DifHz", "CDC": "ASG", "EXPLANATION": "Уставка по допустимой разнице частот", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "DifAng", "CDC": "ASG", "EXPLANATION": "Уставка по допустимой разнице углов", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LivDeaMod", "CDC": "ENG", "EXPLANATION": "Режим, в котором разрешена коммутация аппарата", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "DeaLinVal", "CDC": "ASG", "EXPLANATION": "Максимальное значение напряжения, при котором напряжение на линии считается отсутствующим", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LivLinVal", "CDC": "ASG", "EXPLANATION": "Минимальное значение напряжения, при котором напряжение на линии считается присутствующим", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DeaBusVal", "CDC": "ASG", "EXPLANATION": "Максимальное значение напряжения, при котором напряжение на шинах считается отсутствующим", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LivBusVal", "CDC": "ASG", "EXPLANATION": "Минимальное значение напряжения, при котором напряжение на шинах считается присутствующим", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TotTmms", "CDC": "ING", "EXPLANATION": "Полное время процесса синхронизации", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "SARC",
+"EXPLAN": "Контроль и диагностика при возникновении электрической дуги",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции ЗДЗ. Применяется один экземпляр ЛУ на один датчик возникновения дуги. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Обнаружение дуги", "Счетчики"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "FADet", "CDC": "SPS", "EXPLANATION": "Обнаружение дуги", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "SwArcDet", "CDC": "SPS", "EXPLANATION": "Дуга в выключателе", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FACntRs", "CDC": "INC", "EXPLANATION": "Счетчик дуговых замыканий", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "ArcCntRs", "CDC": "INC", "EXPLANATION": "Счетчик дуговых замыканий в выключателе", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "SCBR",
+"EXPLAN": "Контроль выключателя",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции контроля и мониторинга состояния выключателя. Применяется один экземпляр ЛУ на один выключатель. При пофазномисполнении выключателя используются экземпляры на каждую из фаз. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ColCls", "CDC": "SPS", "EXPLANATION": "Срабатывание катушки включения", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "ColOpn1", "CDC": "SPS", "EXPLANATION": "Срабатывание катушки отключения 1", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "ColOpn2", "CDC": "SPS", "EXPLANATION": "Срабатывание катушки отключения 2", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "AbrAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация пригорания контактов", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AbrWrn", "CDC": "SPS", "EXPLANATION": "Предупреждение об износе контактов", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MechHealth", "CDC": "ENS", "EXPLANATION": "Сигнализация о механической неисправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpTmAlm", "CDC": "SPS", "EXPLANATION": "Допустимое время переключения истекло", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ColAlm1", "CDC": "SPS", "EXPLANATION": "Сигнализация катушки включения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "ColAlm2", "CDC": "SPS", "EXPLANATION": "Сигнализация катушки отключения 1", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "ColAlm3", "CDC": "SPS", "EXPLANATION": "Сигнализация катушки отключения 2", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "OpCntAlm", "CDC": "SPS", "EXPLANATION": "Количество переключений до сигнализации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpCntWrn", "CDC": "SPS", "EXPLANATION": "Количество переключений до предупреждения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmWrn", "CDC": "SPS", "EXPLANATION": "Предупреждение при приближении времени переключения к критическому", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время с момента установки или последнего обслуживания в часах", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "AccAbr", "CDC": "MV", "EXPLANATION": "Аккумулированный нагар", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "SwA", "CDC": "MV", "EXPLANATION": "Ток последнего отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ActAbr", "CDC": "MV", "EXPLANATION": "Износ от последнего отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AuxSwTmOpn", "CDC": "MV", "EXPLANATION": "Время отключения вспомогательного контакта", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AuxSwTmCls", "CDC": "MV", "EXPLANATION": "Время включения вспомогательного контакта", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RctTmOpn", "CDC": "MV", "EXPLANATION": "Измерение времени реакции на команду отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "RctTmCls", "CDC": "MV", "EXPLANATION": "Измерение времени реакции на команду включения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpSpdOpn", "CDC": "MV", "EXPLANATION": "Скорость срабатывания отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpSpdCls", "CDC": "MV", "EXPLANATION": "Скорость срабатывания включения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmOpn", "CDC": "MV", "EXPLANATION": "Время срабатывания отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmCls", "CDC": "MV", "EXPLANATION": "Время срабатывания включения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Stk", "CDC": "MV", "EXPLANATION": "Ход контактов", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OvStkOpn", "CDC": "MV", "EXPLANATION": "Вылет при отключении", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OvStkCls", "CDC": "MV", "EXPLANATION": "Вылет при включении", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "ColA", "CDC": "MV", "EXPLANATION": "Ток катушек", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Tmp", "CDC": "MV", "EXPLANATION": "Температура привода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AbrAlmLev", "CDC": "ASG", "EXPLANATION": "Суммарный нагар для сигнализации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AbrWrnLev", "CDC": "ASG", "EXPLANATION": "Суммарный нагар для предупреждения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpAlmTmh", "CDC": "ING", "EXPLANATION": "Сигнализация по необслуживаемому времени в часах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpWrnTmh", "CDC": "ING", "EXPLANATION": "Предупреждение по необслуживаемому времени в часах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpAlmNum", "CDC": "ING", "EXPLANATION": "Сигнализация о количестве циклов В/О", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpWrnNum", "CDC": "ING", "EXPLANATION": "Предупреждение о количестве циклов В/О", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "SIMG",
+"EXPLAN": "Контроль над изоляционной средой (газ)",
+"SHORT": "КИ",
+"USAGE": "Применяется для реализации функции контроля и мониторинга состояния газовой изоляции и реализации ГЗ. Применяется один экземпляр ЛУ на физический датчик. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Срабатывание газового реле", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "InsAlm", "CDC": "SPS", "EXPLANATION": "Критическое значение изоляции (замена изоляционного материала)", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "InsBlk", "CDC": "SPS", "EXPLANATION": "Небезопасное значение изоляции (блокировка управления)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "InsTr", "CDC": "SPS", "EXPLANATION": "Опасное значение изоляции (отключение устройства)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "PresAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация по давлению газовой изоляции", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "DenAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация по плотности газовой изоляции", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "TmpAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация по температуре газовой изоляции", "T": "", "IEC": "C", "CORP": "M"}, {"NAME": "InsLevMax", "CDC": "SPS", "EXPLANATION": "Уровень газовой изоляции максимален", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "InsLevMin", "CDC": "SPS", "EXPLANATION": "Уровень газовой изоляции минимален", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Pres", "CDC": "MV", "EXPLANATION": "Давление газовой изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Den", "CDC": "MV", "EXPLANATION": "Плотность газовой изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Tmp", "CDC": "MV", "EXPLANATION": "Температура газовой изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "InsBlkTmh", "CDC": "INS", "EXPLANATION": "Расчетное время до достижения уровня блокировки, соответствует утечке газа из отсека", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": [{"C":"Как минимум один объект данных должен быть использован"}]
+}
+,
+{
+"CLASS": "SIML",
+"EXPLAN": "Контроль над изоляционной средой (жидкость)",
+"SHORT": "КИ",
+"USAGE": "Применяется для реализации функции контроля и мониторинга состояния жидкостной изоляции и реализации ГЗ. Применяется один экземпляр ЛУ на физический датчик. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Срабатывание струйного реле", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "InsAlm", "CDC": "SPS", "EXPLANATION": "Критическое значение изоляции (замена изоляционного материала)", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "InsBlk", "CDC": "SPS", "EXPLANATION": "Небезопасное значение изоляции (блокировка управления)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "InsTr", "CDC": "SPS", "EXPLANATION": "Опасное значение изоляции (отключение устройства)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TmpAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация по температуре жидкостной изоляции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GasInsAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация о газе в изоляционной среде", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GasInsTr", "CDC": "SPS", "EXPLANATION": "Отключение по газу в изоляции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "GasFlwTr", "CDC": "SPS", "EXPLANATION": "Отключение по падению уровня жидкости из-за перехода в газ", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "InsLevMax", "CDC": "SPS", "EXPLANATION": "Уровень жидкостной изоляции максимален", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "InsLevMin", "CDC": "SPS", "EXPLANATION": "Уровень жидкостной изоляции минимален", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "H2Alm", "CDC": "SPS", "EXPLANATION": "Сигнализация об уровне водорода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "H2Wrn", "CDC": "SPS", "EXPLANATION": "Предупреждений об уровне водорода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MstAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация о наличии влаги", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MstWrn", "CDC": "SPS", "EXPLANATION": "Предупреждение о наличии влаги", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Tmp", "CDC": "MV", "EXPLANATION": "Температура жидкостной изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Lev", "CDC": "MV", "EXPLANATION": "Уровень жидкостной изоляции (обычно в метрах)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Pres", "CDC": "MV", "EXPLANATION": "Давление жидкостной изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "H2O", "CDC": "MV", "EXPLANATION": "Относительное насыщение влагой жидкостной изоляции (в %)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "H2Opap", "CDC": "MV", "EXPLANATION": "Относительная насыщенность влагой изолирующей бумаги (в %)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "H2Oair", "CDC": "MV", "EXPLANATION": "Относительная влажность воздуха в объеме расширителя (в %)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "H2Otmp", "CDC": "MV", "EXPLANATION": "Температура жидкостной изоляции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "H2ppm", "CDC": "MV", "EXPLANATION": "Уровень водорода в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "N2ppm", "CDC": "MV", "EXPLANATION": "Уровень азота в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Coppm", "CDC": "MV", "EXPLANATION": "Уровень оксида углерода в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CO2ppm", "CDC": "MV", "EXPLANATION": "Уровень диоксида углерода в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CH4ppm", "CDC": "MV", "EXPLANATION": "Уровень метана в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "C2H2ppm", "CDC": "MV", "EXPLANATION": "Уровень ацетилена в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "C2H4ppm", "CDC": "MV", "EXPLANATION": "Уровень этилена в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "C2H6ppm", "CDC": "MV", "EXPLANATION": "Уровень этана в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "O2ppm", "CDC": "MV", "EXPLANATION": "Уровень кислорода в промилле", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CmbuGas", "CDC": "MV", "EXPLANATION": "Измерение общего количества растворенных горючих газов (TDCG)", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FltGas", "CDC": "MV", "EXPLANATION": "Объем газа для отключения", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "SOPM",
+"EXPLAN": "Контроль рабочего механизма",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции контроля и мониторинга состояния механизмов (приводов КА). Применяется один экземпляр ЛУ на механизм. При пофазном исполнении механизма используются экземпляры на каждую из фаз. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "MotOp", "CDC": "SPS", "EXPLANATION": "Привод в работе", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotStrAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация о количестве пусков привода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HyAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация о неисправности гидравлики", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HyBlk", "CDC": "SPS", "EXPLANATION": "Блокировка работы состоянием гидравлики", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EnBlk", "CDC": "SPS", "EXPLANATION": "Блокировки по накоплению энергии привода", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EnAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация по энергии привода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotAlm", "CDC": "SPS", "EXPLANATION": "Достижение времени работы привода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HeatAlm", "CDC": "SPS", "EXPLANATION": "Сигнализация обогрева", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "HeatDrvAlm", "CDC": "SPS", "EXPLANATION": "Неисправность обогрева привода", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "AutoSprChrg", "CDC": "SPS", "EXPLANATION": "Автоматический завод пружины", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "ChaIntvTms", "CDC": "INS", "EXPLANATION": "Интервал между двумя последними операциями", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotStr", "CDC": "INS", "EXPLANATION": "Количество пусков привода", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "En", "CDC": "MV", "EXPLANATION": "Запасенная энергия", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HyPres", "CDC": "MV", "EXPLANATION": "Давление в гидравлике", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HyTmp", "CDC": "MV", "EXPLANATION": "Температура гидравлики", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotTm", "CDC": "MV", "EXPLANATION": "Время работы привода во время операции", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotA", "CDC": "MV", "EXPLANATION": "Ток привода", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Tmp", "CDC": "MV", "EXPLANATION": "Температура в приводной кабине", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotAlmTms", "CDC": "ING", "EXPLANATION": "Уставка по времени работы привода в секундах", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotStrNum", "CDC": "ING", "EXPLANATION": "Уставка по количеству операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MotStrTms", "CDC": "ING", "EXPLANATION": "Интервал между пусками привода", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "STMP",
+"EXPLAN": "Контроль температуры",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции контроля и температуры. Применяется один экземпляр ЛУ на физический датчик. Экземпляры ЛУ размещаются в логических устройствах РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Alm", "CDC": "SPS", "EXPLANATION": "Сигнализация по температуре", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Otkлючehue", "CDC": "SPS", "EXPLANATION": "Отключение по температуре", "T": "", "IEC": "O", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "OpCntRs", "CDC": "INC", "EXPLANATION": "Сбрасываемый счетчик операций", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Tmp", "CDC": "MV", "EXPLANATION": "Температура", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmpAlmSpt", "CDC": "ASG", "EXPLANATION": "Уставка сигнализации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TmpOtkлючehueSpt", "CDC": "ASG", "EXPLANATION": "Уставка отключения", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HiTmpAlmSpt", "CDC": "ASG", "EXPLANATION": "Верхняя уставка для сигнализации", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "HiTmpTrpSpt", "CDC": "ASG", "EXPLANATION": "Верхняя уставка для отключения", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "LoTmpAlmSpt", "CDC": "ASG", "EXPLANATION": "Нижняя уставка для сигнализации", "T": "", "IEC": "E", "CORP": "M"}, {"NAME": "LoTmpTrpSpt", "CDC": "ASG", "EXPLANATION": "Нижняя уставка для отключения", "T": "", "IEC": "E", "CORP": "M"}],
+"COND": []
+}
+,
+{
+"CLASS": "TCTR",
+"EXPLAN": "Трансформатор тока",
+"SHORT": "ТТ",
+"USAGE": "Применяется для реализации функции передачи измерения тока. Применяется один экземпляр ЛУ на канал тока. Экземпляры ЛУ размещаются в логических устройствах измерений.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Измерения", "Сигналы о статусе параметров", "Уставки коррекции"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "AlmOp", "CDC": "SPS", "EXPLANATION": "Сигнализация", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamAccRtg", "CDC": "VSD", "EXPLANATION": "Указание класса точности", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamARtg", "CDC": "VSD", "EXPLANATION": "Список номинальных значений первичных токов", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamClipRtg", "CDC": "VSD", "EXPLANATION": "Предельная кратность измерения", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "AmpSv", "CDC": "SAV", "EXPLANATION": "Ток (sampled value)", "T": "", "IEC": "C1", "CORP": "C1"}, {"NAME": "Artg", "CDC": "ASG", "EXPLANATION": "Номинальный ток", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HzRtg", "CDC": "ASG", "EXPLANATION": "Номинальная частота", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Rat", "CDC": "ASG", "EXPLANATION": "Коэффициент трансформации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Cor", "CDC": "ASG", "EXPLANATION": "Коррекция по амплитуде", "T": "", "IEC": "C2", "CORP": "O"}, {"NAME": "AngCor", "CDC": "ASG", "EXPLANATION": "Коррекция по фазе", "T": "", "IEC": "C2", "CORP": "O"}, {"NAME": "CorCrv", "CDC": "CSG", "EXPLANATION": "Кривая коррекции", "T": "", "IEC": "C2", "CORP": "O"}],
+"COND": [{"C1":"Обязателен к применению для Архитектуры III"}, {"C2":"CorCrv используется при коррекции по характеристике"}]
+}
+,
+{
+"CLASS": "TVTR",
+"EXPLAN": "Трансформатор напряжения",
+"SHORT": "ТН",
+"USAGE": "Применяется для реализации функции передачи измерения напряжения. Применяется один экземпляр ЛУ на канал напряжения. Экземпляры ЛУ размещаются в логических устройствах измерений.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Измерения", "Сигналы о статусе параметров", "Уставки коррекции"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "FuFail", "CDC": "SPS", "EXPLANATION": "Отказ предохранителя", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamAccRtg", "CDC": "VSD", "EXPLANATION": "Указание класса точности", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamVRtg", "CDC": "VSD", "EXPLANATION": "Номинальное первичное напряжение", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "NamClipRtg", "CDC": "VSD", "EXPLANATION": "Предельная кратность измерения", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}],
+"PARAMS": [{"NAME": "VolSv", "CDC": "SAV", "EXPLANATION": "Напряжение (Sampled Value)", "T": "", "IEC": "C1", "CORP": "C1"}, {"NAME": "VRtg", "CDC": "ASG", "EXPLANATION": "Номинальное напряжение", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HzRtg", "CDC": "ASG", "EXPLANATION": "Номинальная частота", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Rat", "CDC": "ASG", "EXPLANATION": "Коэффициент трансформации", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Cor", "CDC": "ASG", "EXPLANATION": "Коррекция по амплитуде", "T": "", "IEC": "C2", "CORP": "O"}, {"NAME": "AngCor", "CDC": "ASG", "EXPLANATION": "Коррекция по фазе", "T": "", "IEC": "C2", "CORP": "O"}, {"NAME": "CorCrv", "CDC": "CSG", "EXPLANATION": "Кривая коррекции", "T": "", "IEC": "C2", "CORP": "O"}],
+"COND": [{"C1":"Обязателен к применению для Архитектуры III"}, {"C2":"CorCrv используется при коррекции по характеристике"}]
+}
+,
+{
+"CLASS": "XCBR",
+"EXPLAN": "Силовой выключатель",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции физического силового выключателя. Применяется один экземпляр ЛУ на механизм. При пофазном исполнении выключателя используются экземпляры на каждую из фаз и один общий экземпляр. Экземпляры ЛУ размещаются в логических устройствах управления РЗА/АСУ ТП.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное) (local means without substation automation communication, hardwired direct control)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "OpCnt", "CDC": "INS", "EXPLANATION": "Счетчик операций", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "CBOpCap", "CDC": "ENS", "EXPLANATION": "Коммутационная способность силовых выключателей", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "POWCap", "CDC": "ENS", "EXPLANATION": "Коммутационная способность силовых выключателей при отключении во время перехода через 0", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpCap", "CDC": "INS", "EXPLANATION": "Коммутационная способность силовых выключателей при полной готовности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Dsc", "CDC": "SPS", "EXPLANATION": "Несовпадение фаз", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "EmgTr", "CDC": "SPS", "EXPLANATION": "Аварийное отключение выключателя", "T": "", "IEC": "E", "CORP": "M"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RepMod", "CDC": "SPC", "EXPLANATION": "Ремонт выключателя", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Pos", "CDC": "DPC", "EXPLANATION": "Положение выключателя", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "BlkOpn", "CDC": "SPC", "EXPLANATION": "Блокировка отключения", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "BlkCls", "CDC": "SPC", "EXPLANATION": "Блокировка включения", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "ChaMotEna", "CDC": "SPC", "EXPLANATION": "Привод готов", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "SumSwARs", "CDC": "BCR", "EXPLANATION": "Сумма отключенных ампер", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "CBTmms", "CDC": "ING", "EXPLANATION": "Время включения выключателя", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "XSWI",
+"EXPLAN": "Разъединитель/заземлитель",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции физического КА. Применяется один экземпляр ЛУ на механизм. При пофазном исполнении КА используются экземпляры на каждую из фаз и один общий экземпляр. Экземпляры ЛУ размещаются в логических устройствах управления АСУ ТП.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LocKey", "CDC": "SPS", "EXPLANATION": "Положение ключа режима управления (ИСТИНА - местное, ЛОЖЬ - дистанционное)", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Loc", "CDC": "SPS", "EXPLANATION": "Поведение местного управления", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "OpCnt", "CDC": "INS", "EXPLANATION": "Счетчик операций", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "SwTyp", "CDC": "ENS", "EXPLANATION": "Тип аппарата", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "SwOpCap", "CDC": "ENS", "EXPLANATION": "Коммутационная способность аппарата", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "MaxOpCap", "CDC": "INS", "EXPLANATION": "Коммутационная способность аппарата при полной готовности", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Dsc", "CDC": "SPS", "EXPLANATION": "Несовпадение фаз", "T": "", "IEC": "O", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "RepMod", "CDC": "SPC", "EXPLANATION": "Ремонт КА", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LocSta", "CDC": "SPC", "EXPLANATION": "Право на переключение на уровне станции", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Pos", "CDC": "DPC", "EXPLANATION": "Положение аппарата", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "BlkOpn", "CDC": "SPC", "EXPLANATION": "Блокировка отключения", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "BlkCls", "CDC": "SPC", "EXPLANATION": "Блокировка включения", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "ChaMotEna", "CDC": "SPC", "EXPLANATION": "Привод готов", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [],
+"COND": []
+}
+,
+{
+"CLASS": "YLTC",
+"EXPLAN": "Регулирование под нагрузкой",
+"SHORT": "РПН",
+"USAGE": "Применяется для реализации функции физического РПН. Применяется один экземпляр ЛУ на механизм. При пофазном исполнении РПН используются экземпляры на каждую из фаз. Экземпляры ЛУ размещаются в логических устройствах управления РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Отображение статуса места управления", "Управление местом управления", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpCnt", "CDC": "INS", "EXPLANATION": "Счетчик операций", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "EndPosR", "CDC": "SPS", "EXPLANATION": "Достигнуто максимальное положение", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "EndPosL", "CDC": "SPS", "EXPLANATION": "Достигнуто минимальное положение", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "OoStep", "CDC": "SPS", "EXPLANATION": "Рассогласование", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "LTCCycAlm", "CDC": "SPS", "EXPLANATION": "Цикл переключения положения РПН не завершен", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BlkLoVisc", "CDC": "SPS", "EXPLANATION": "Блокировка по низкой вязкости", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "LTCInOp", "CDC": "SPS", "EXPLANATION": "Привод в работе", "T": "", "IEC": "E", "CORP": "M"}],
+"STATUS": [],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "TapPos", "CDC": "ISC", "EXPLANATION": "Изменение положения в заданное", "T": "", "IEC": "C", "CORP": "O"}, {"NAME": "TapChg", "CDC": "BSC", "EXPLANATION": "Изменение положения по командам (выше, ниже, стоп)", "T": "", "IEC": "C", "CORP": "M"}],
+"PARAMS": [],
+"COND": [{"C":"В зависимости от метода регулирования используется как минимум один объект данных из TapChg и Tap Pos"}]
+}
+,
+{
+"CLASS": "ZAXN",
+"EXPLAN": "Вспомогательная сеть",
+"SHORT": "",
+"USAGE": "Применяется для реализации функции СОПТ. Применяется один экземпляр ЛУ на цепь. Экземпляры ЛУ размещаются в логических устройствах управления РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Сигналы о статусе параметров"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "VolLoss", "CDC": "SPS", "EXPLANATION": "Отсутствие напряжения", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "VolHi", "CDC": "SPS", "EXPLANATION": "Напряжение выше допустимого уровня", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "VolLo", "CDC": "SPS", "EXPLANATION": "Напряжение ниже допустимого уровня", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "PulsHi", "CDC": "SPS", "EXPLANATION": "Повышенный уровень пульсация напряжения", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "InsWarn", "CDC": "SPS", "EXPLANATION": "Предупредительный сигнал снижения изоляции", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "InsAlm", "CDC": "SPS", "EXPLANATION": "Аварийный сигнал снижения изоляции", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "InsSupFail", "CDC": "SPS", "EXPLANATION": "Неисправность устройства контроля изоляции сети", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "Alm", "CDC": "SPS", "EXPLANATION": "Неисправность ЩПТ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "DistAlm", "CDC": "SPS", "EXPLANATION": "Неисправность в ШРОТ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "FedFail1", "CDC": "SPS", "EXPLANATION": "Номер фидера с поврежденной изоляцией", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "VolHiVal", "CDC": "ASG", "EXPLANATION": "Уставка по верхнему уровню напряжения", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "VolLoVal", "CDC": "ASG", "EXPLANATION": "Уставка по нижнему уровню напряжения", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "PulsVal", "CDC": "ASG", "EXPLANATION": "Уставка по уровню пульсаций", "T": "", "IEC": "E", "CORP": "O"}],
+"PARAMS": [{"NAME": "Vol", "CDC": "MV", "EXPLANATION": "Напряжение сети", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Amp", "CDC": "MV", "EXPLANATION": "Ток сети", "T": "", "IEC": "O", "CORP": "M"}],
+"COND": []
+}
+,
+{
+"CLASS": "ZBAT",
+"EXPLAN": "Аккумуляторная батарея",
+"SHORT": "АБ",
+"USAGE": "Применяется для реализации функции аккумуляторной батареи. Применяется один экземпляр ЛУ на аккумуляторную батарею или группу аккумуляторных батарей. Экземпляры ЛУ размещаются в логических устройствах управления РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["Режим работы логического узла", "Сигналы о статусе параметров", "Параметры"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "TestRsl", "CDC": "SPS", "EXPLANATION": "Завершение теста батареи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BatHi", "CDC": "SPS", "EXPLANATION": "Батарея заряжена", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BatLo", "CDC": "SPS", "EXPLANATION": "Батарея разряжена", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BatFail", "CDC": "SPS", "EXPLANATION": "Обрыв в цепи АБ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "ChrgSupFail", "CDC": "SPS", "EXPLANATION": "Неисправность питающей цепи ЗПУ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "ChrgFail", "CDC": "SPS", "EXPLANATION": "Неисправность ЗПУ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "DevFail", "CDC": "SPS", "EXPLANATION": "Неисправность ВДУ", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "BatTest", "CDC": "SPC", "EXPLANATION": "Пуск тестирования батареи", "T": "", "IEC": "O", "CORP": "O"}],
+"PARAMS": [{"NAME": "Vol", "CDC": "MV", "EXPLANATION": "Напряжение батареи", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "VolChgRte", "CDC": "MV", "EXPLANATION": "Скорость изменения напряжения батареи", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "Amp", "CDC": "MV", "EXPLANATION": "Ток утечки", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "BatChrgCur", "CDC": "MV", "EXPLANATION": "Ток подзаряда АБ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "ChrgCur", "CDC": "MV", "EXPLANATION": "Ток ЗПУ", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "LoBatVal", "CDC": "ASG", "EXPLANATION": "Предупредительное значение разряда", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "HiBatVal", "CDC": "ASG", "EXPLANATION": "Предупредительное значение полного заряда", "T": "", "IEC": "O", "CORP": "O"}],
+"COND": []
+}
+,
+{
+"CLASS": "ZCAP",
+"EXPLAN": "Батарея статических конденсаторов",
+"SHORT": "БСК",
+"USAGE": "Применяется для реализации функции управления батареей статических конденсаторов. Применяется один экземпляр ЛУ на одну батарею статических конденсаторов. Экземпляры ЛУ размещаются в логических устройствах управления РЗА.",
+"LNNAME": [{"NAME": "LNName", "CDC": "", "EXPLANATION": "Сочетание prefix, LN class и LN instance", "T": "", "IEC": "", "CORP": ""}],
+"FUNCT": ["", "Режим работы логического узла", "Сигналы о статусе параметров", "Параметры"],
+"DESCR": [{"NAME": "EEName", "CDC": "DPL", "EXPLANATION": "Информация о логическом узле внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "NamPlt", "CDC": "LPL", "EXPLANATION": "Информация о логическом узле", "T": "", "IEC": "O", "CORP": "M"}],
+"STATUS": [{"NAME": "Beh", "CDC": "ENS", "EXPLANATION": "Индикация поведения", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "Health", "CDC": "ENS", "EXPLANATION": "Индикация исправности", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "EEHealth", "CDC": "ENS", "EXPLANATION": "Индикация исправности внешнего оборудования", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "OpTmh", "CDC": "INS", "EXPLANATION": "Время срабатывания", "T": "", "IEC": "O", "CORP": "O"}, {"NAME": "DschBlk", "CDC": "SPS", "EXPLANATION": "Блокировка по причине разряда", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "CapLockU", "CDC": "SPS", "EXPLANATION": "Блокировка включения БСК по напряжению", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CapLockFuFl", "CDC": "SPS", "EXPLANATION": "Блокировка включения БСК при неисправности ТН", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CapLockPrt", "CDC": "SPS", "EXPLANATION": "Блокировка включения БСК при работе защит", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CapLockExt", "CDC": "SPS", "EXPLANATION": "Блокировка включения БСК внешним сигналом", "T": "", "IEC": "E", "CORP": "O"}],
+"DIRECT": [{"NAME": "Mod", "CDC": "ENC", "EXPLANATION": "Режим работы", "T": "", "IEC": "O", "CORP": "M"}, {"NAME": "CapDS", "CDC": "SPC", "EXPLANATION": "Состояние конденсаторной батареи", "T": "", "IEC": "M", "CORP": "M"}, {"NAME": "CapRegMpg", "CDC": "SPC", "EXPLANATION": "Режим работы автоматики", "T": "", "IEC": "E", "CORP": "M"}],
+"PARAMS": [{"NAME": "CapLoV", "CDC": "ASG", "EXPLANATION": "Нижний порог включения БСК по напряжению", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CapHiV", "CDC": "ASG", "EXPLANATION": "Верхний порог включения БСК по напряжению", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CapLoTripV", "CDC": "ASG", "EXPLANATION": "Уставка отключения БСК по минимальному напряжению", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "RepClsLkTms", "CDC": "ING", "EXPLANATION": "Таймер блокировки повторного включения БСК после отключения", "T": "", "IEC": "E", "CORP": "O"}, {"NAME": "CapCtrlTms", "CDC": "ING", "EXPLANATION": "Таймер управления включением и отключением БСК", "T": "", "IEC": "E", "CORP": "O"}],
+"COND": []
+}
+]
